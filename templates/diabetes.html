@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Health Cal</title>
+        <script src="./../static/script.js"></script>
+        <link rel="stylesheet" href="./../static/style.css">
+    </head>
+    <body>
+        <form>
+            <div class="container">
+                <div class="inpGroup">
+                    <input type="float" class="inp" name="Glucose" placeholder="" required>
+                    <label>Glucose</label>
+                    <span></span>
+                </div>
+            </div>
+            <div class="container">
+                <div class="inpGroup">
+                    <input type="float" class="inp" name="Systolic Blood Pressure" placeholder="" required>
+                    <label>Systolic Blood Pressure</label>
+                    <span></span>
+                </div>
+            </div>
+            <div class="container">
+                <div class="inpGroup">
+                    <input type="float" class="inp" name="Skin Thickness" placeholder="" required>
+                    <label>Skin Thickness</label>
+                    <span></span>
+                </div>
+            </div>
+            <div class="container">
+                <div class="inpGroup">
+                    <input type="float" class="inp" name="Insulin" placeholder="" required>
+                    <label>Insulin</label>
+                    <span></span>
+                </div>
+            </div>
+            <div class="container">
+                <div class="inpGroup">
+                    <input type="float" class="inp" name="BMI" placeholder="" required>
+                    <label>BMI</label>
+                    <span></span>
+                </div>
+            </div>
+            <div class="container">
+                <div class="inpGroup">
+                    <input type="float" class="inp" name="Age" placeholder="" required>
+                    <label>Age</label>
+                    <span></span>
+                </div>
+            </div>
+            <br>
+            <div id="done" onclick="submit()">submit data</div>
+        </form>
+        <p id = "result"></p>
+    </body>
+</html>
