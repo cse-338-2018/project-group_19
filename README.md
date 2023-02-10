@@ -1,7 +1,4 @@
-# project-group_19
-project-group_19 created by GitHub Classroom
-
-# Diabetes Prediction App
+# project-group_19 - Diabetes Prediction App
 
 ## 🛠 Model 
 
