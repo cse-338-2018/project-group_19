@@ -7,7 +7,7 @@
 ## ⚡ Libraries used
 
 - Scikit-Learn
-- Streamlit
+- Flusk
 - Matplotlib
 - Numpy
 
