@@ -3,54 +3,92 @@
         <title>Health Cal</title>
         <script src="./../static/script.js"></script>
         <link rel="stylesheet" href="./../static/style.css">
+        <link rel="stylesheet" href="./../static/pages.css">
     </head>
     <body>
-        <form>
+        <form class = "form">
             <div class="container">
-                <div class="inpGroup">
-                    <input type="float" class="inp" name="Glucose" placeholder="" required>
-                    <label>Glucose</label>
+                <div class="inp-top">
+                    <img src="./../static/images/stat_illustration.svg">
+                    <div class="WavyText pageTitle" onclick="initWavyText(this)">
+                        <span>D</span>
+                        <span>i</span>
+                        <span>a</span>
+                        <span>b</span>
+                        <span>e</span>
+                        <span>t</span>
+                        <span>e</span>
+                        <span>s</span>
+                        <span> </span>
+                        <span>R</span>
+                        <span>i</span>
+                        <span>s</span>
+                        <span>k</span>
+                        <span> </span>
+                        <span>D</span>
+                        <span>e</span>
+                        <span>t</span>
+                        <span>e</span>
+                        <span>c</span>
+                        <span>t</span>
+                        <span>i</span>
+                        <span>o</span>
+                        <span>n</span>
+                    </div>
+                </div>
+                <div class="inpGroup" onclick="clr()">
+                    <div class="inp_title">
+                        Glucose (Plasma glucose concentration after 2 hours in an OGT test) :
+                    </div>
+                    <div class="rangeContainer">
+                        <input onchange="clr()" class="inpRange inp" type="range" id="points" name="points" min="50" max="250" step="1" oninput="this.nextElementSibling.value = this.value">
+                        <output>120</output>
+                    </div>
+                </div>
+                <div class="inpGroup" onclick="clr()">
+                    <div class="inp_title">
+                        Diastolic Blood Pressure (mm Hg) :
+                    </div>
+                    <div class="rangeContainer">
+                        <input onchange="clr()" class="inpRange inp" type="range" id="points" name="points" min="50" max="120" step="1" oninput="this.nextElementSibling.value = this.value">
+                        <output>80</output>
+                    </div>
+                </div>
+                <div class="inpGroup" onclick="clr()">
+                    <input onchange="clr()" type="number" class="inp" placeholder="" required step = "0.1">
+                    <label class="inpLbl">Skin Thickness</label>
                     <span></span>
                 </div>
-            </div>
-            <div class="container">
-                <div class="inpGroup">
-                    <input type="float" class="inp" name="Systolic Blood Pressure" placeholder="" required>
-                    <label>Systolic Blood Pressure</label>
+                <div class="inpGroup" onclick="clr()">
+                    <input onchange="clr()" type="number" class="inp" placeholder="" required step = "0.1">
+                    <label class="inpLbl">Insulin</label>
                     <span></span>
                 </div>
-            </div>
-            <div class="container">
-                <div class="inpGroup">
-                    <input type="float" class="inp" name="Skin Thickness" placeholder="" required>
-                    <label>Skin Thickness</label>
+                <div class="inpGroup" onclick="clr()">
+                    <input onchange="clr()" type="number" class="inp" placeholder="" required step = "0.1">
+                    <label class="inpLbl">BMI</label>
                     <span></span>
                 </div>
-            </div>
-            <div class="container">
-                <div class="inpGroup">
-                    <input type="float" class="inp" name="Insulin" placeholder="" required>
-                    <label>Insulin</label>
+                <div class="inpGroup" onclick="clr()">
+                    <input onchange="clr()" type="number" class="inp" placeholder="" required step = "1">
+                    <label class="inpLbl">Age</label>
                     <span></span>
                 </div>
-            </div>
-            <div class="container">
-                <div class="inpGroup">
-                    <input type="float" class="inp" name="BMI" placeholder="" required>
-                    <label>BMI</label>
-                    <span></span>
+                <br>
+                
+                <div class = 'foot'  style = "width: 100%">
+                    <div class = 'btn'> 
+                        <a href="/">
+                            <span style="display: block;">
+                                Back
+                            </span>
+                        </a>
+                    </div>
+                    <div id="done" class = 'btn' onclick="submit_diabetes()">submit data</div>
                 </div>
+                <div class="WavyText pageTitle" style="text-align: center;" onclick="initWavyText(this)"> <span><p id = 'result'></p></span></div>
             </div>
-            <div class="container">
-                <div class="inpGroup">
-                    <input type="float" class="inp" name="Age" placeholder="" required>
-                    <label>Age</label>
-                    <span></span>
-                </div>
-            </div>
-            <br>
-            <div id="done" onclick="submit()">submit data</div>
-        </form>
-        <p id = "result"></p>
+        
+        </form> 
     </body>
 </html>
