@@ -1,0 +1,184 @@
+<html>
+    <head>
+        <title>Health Cal</title>
+        <script src="./../static/script.js"></script>
+        <link rel="stylesheet" href="./../static/style.css">
+        <link rel="stylesheet" href="./../static/pages.css">
+    </head>
+    <body>
+        <form>
+            <div class="container">
+                <div class="inp-top">
+                    <img src="./../static/images/stat_illustration.svg">
+                    <div class="WavyText pageTitle" onclick="initWavyText(this)">
+                        <span>S</span>
+                        <span>t</span>
+                        <span>r</span>
+                        <span>o</span>
+                        <span>k</span>
+                        <span>e</span>
+                        <span> </span>
+                        <span>R</span>
+                        <span>i</span>
+                        <span>s</span>
+                        <span>k</span>
+                        <span> </span>
+                        <span>D</span>
+                        <span>e</span>
+                        <span>t</span>
+                        <span>e</span>
+                        <span>c</span>
+                        <span>t</span>
+                        <span>i</span>
+                        <span>o</span>
+                        <span>n</span>
+                    </div>
+                </div>
+                <div class="inpGroup">
+                    <div class="inp_title">
+                        Gender
+                    </div>
+                    <div class="radioContainer">
+                        <p>
+                            <input type="radio" id="male" name="sex" checked value="1">
+                            <label for="male">Female</label>
+                          </p>
+                          <p>
+                            <input type="radio" id="female" name="sex" value="0">
+                            <label for="female">Male</label>
+                        </p>
+                    </div>
+                </div>
+                <div class="inpGroup">
+                    <input type="number" class="inp" placeholder="" required step = "1" min = "1" max = "100">
+                    <label class="inpLbl">Age</label>
+                    <span></span>
+                </div>
+                <div class="inpGroup">
+                    <div class="inp_title">
+                        Do you have hypertension?
+                    </div>
+                    <div class="radioContainer">
+                        <p>
+                            <input type="radio" id="oy" name="ex" checked value="1">
+                            <label for="oy"> Yes</label>
+                        </p>
+                        <p>
+                            <input type="radio" id="na" name="ex" value="0">
+                            <label for="na"> No</label>
+                        </p>
+                    </div>
+                </div>
+                <div class="inpGroup">
+                    <div class="inp_title">
+                        Do you have heart disease?
+                    </div>
+                    <div class="radioContainer">
+                        <p>
+                            <input type="radio" id="oyheart" name="heart" checked value="1">
+                            <label for="oyheart"> Yes</label>
+                        </p>
+                        <p>
+                            <input type="radio" id="naheart" name="heart" value="0">
+                            <label for="naheart"> No</label>
+                        </p>
+                    </div>
+                </div>
+                <div class="inpGroup">
+                    <div class="inp_title">
+                        Are you married?
+                    </div>
+                    <div class="radioContainer">
+                        <p>
+                            <input type="radio" id="oymarry" name="marry" checked value="1">
+                            <label for="oymarry"> Yes</label>
+                        </p>
+                        <p>
+                            <input type="radio" id="namarry" name="marry" value="0">
+                            <label for="namarry"> No</label>
+                        </p>
+                    </div>
+                </div>
+                <div class="inpGroup">
+                    <div class="inp_title">
+                        Work type
+                    </div>
+                    <div class="radioContainer">
+                        <p>
+                            <input type="radio" id="child" name="work" checked value="1">
+                            <label for="child"> Children</label>
+                        </p>
+                        <p>
+                            <input type="radio" id="govt" name="work" value="0">
+                            <label for="govt"> Govt Job </label>
+                        </p>
+                        <p>
+                            <input type="radio" id="private" name="work" value="2">
+                            <label for="private"> Private Job</label>
+                        </p>
+                        <p>
+                            <input type="radio" id="self" name="work" value="3">
+                            <label for="self"> Self Employed</label>
+                        </p>
+                    </div>
+                </div>
+                    <div class="inpGroup">
+                        <div class="inp_title">
+                            Residence type:
+                        </div>
+                        <div class="radioContainer">
+                            <p>
+                                <input type="radio" id="urban" name="res" checked value="1">
+                                <label for="urban"> Urban </label>
+                            </p>
+                            <p>
+                                <input type="radio" id="rural" name="res" value="0">
+                                <label for="rural"> Rural </label>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- <div class="inpGroup"> -->
+                        <div class="inpGroup">
+                            
+                            <div class="inp_title">
+                                Glucose (Plasma glucose concentration after 2 hours in an OGT test) :
+                            </div>
+                            <div class="rangeContainer">
+                                <input class="inpRange inp" type="range" id="points" name="points" min="50" max="250" step="1" oninput="this.nextElementSibling.value = this.value">
+                                <output>120</output>
+                            </div>
+                        </div>
+                        <div class="inpGroup">
+                            <input type="number" class="inp" placeholder="" required step = "0.1" min = "14" max = "40">
+                            <label class="inpLbl">BMI</label>
+                            <span></span>
+                        </div>
+                        <div class="inpGroup">
+                            <div class="inp_title">
+                                Smoking Status:
+                            </div>
+                            <div class="radioContainer">
+                                <p>
+                                    <input type="radio" id="fo" name="smoke" checked value="1">
+                                    <label for="fo"> Formerly smoked</label>
+                                </p>
+                                <p>
+                                    <input type="radio" id="never" name="smoke" value="2">
+                                    <label for="never"> Never</label>
+                                </p>
+                                <p>
+                                    <input type="radio" id="smoker" name="smoke" value="2">
+                                    <label for="smoker"> Smoker</label>
+                                </p>
+                                
+                            </div>
+                        </div>
+                    <!-- </div> -->
+                <!-- </div> -->
+                <br>
+                <div id="done" class = 'menu_btn' onclick="submit_stroke()">submit data</div>
+                <div class="WavyText pageTitle" style="text-align: center;" onclick="initWavyText(this)"> <span><p id = 'result'></p></span></div>
+            </div>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,170 @@
+<html>
+    <head>
+        <title>Health Cal</title>
+        <script src="./../static/script.js"></script>
+        <link rel="stylesheet" href="./../static/style.css">
+        <link rel="stylesheet" href="./../static/pages.css">
+    </head>
+    <body>
+        <form>
+            <div class="container">
+                <div class="inp-top">
+                    <img src="./../static/images/stat_illustration.svg">
+                    <div class="WavyText pageTitle" onclick="initWavyText(this)">
+                        <span>H</span>
+                        <span>e</span>
+                        <span>a</span>
+                        <span>r</span>
+                        <span>t</span>
+                        <span> </span>
+                        <span>R</span>
+                        <span>i</span>
+                        <span>s</span>
+                        <span>k</span>
+                        <span> </span>
+                        <span>D</span>
+                        <span>e</span>
+                        <span>t</span>
+                        <span>e</span>
+                        <span>c</span>
+                        <span>t</span>
+                        <span>i</span>
+                        <span>o</span>
+                        <span>n</span>
+                    </div>
+                </div>
+                <div class="inpGroup" onclick="clr()">
+                    <input type="number" class="inp" placeholder="" required step = "1" min = "1" max = "100">
+                    <label class="inpLbl">Age</label>
+                    <span></span>
+                </div>
+                <div class="inpGroup" onclick="clr()">
+                    <div class="inp_title">
+                        Sex:
+                    </div>
+                    <div class="radioContainer">
+                        <p>
+                            <input type="radio" id="male" name="sex" checked value="0">
+                            <label for="male">Female</label>
+                          </p>
+                          <p>
+                            <input type="radio" id="female" name="sex" value="1">
+                            <label for="female">Male</label>
+                        </p>
+                    </div>
+                </div>
+                <div class="inpGroup" onclick="clr()">
+                    <div class="inp_title">
+                        Chest Pain Type
+                    </div>
+                    <div class="radioContainer">
+                        <p>
+                            <input type="radio" id="typical" name="cp" checked value="1">
+                            <label for="typical">Typical Angina</label>
+                        </p>
+                        <p>
+                            <input type="radio" id="atypical" name="cp" value="2">
+                            <label for="atypical">Atypical Angina</label>
+                        </p>
+                        <p>
+                            <input type="radio" id="nonangina" name="cp" value="3">
+                            <label for="nonangina">Non Anginal Pain</label>
+                        </p>
+                        <p>
+                            <input type="radio" id="no" name="cp" value="0">
+                            <label for="no">No Pain</label>
+                        </p>
+                    </div>
+                </div>
+                <div class="inpGroup" onclick="clr()">
+                    <div class="inp_title">
+                        Resting Blood Pressure (Systolic)
+                    </div>
+                    <div class="rangeContainer">
+                        <input class="inpRange inp" type="range" id="points" name="points" min="100" max="200" step="1" oninput="this.nextElementSibling.value = this.value">
+                        <output>120</output>
+                    </div>
+                </div>
+                <div class="inpGroup" onclick="clr()">
+                    <div class="inp_title">
+                        Serum Cholestoral (mg/dl)
+                    </div>
+                    <div class="rangeContainer">
+                        <input class="inpRange inp" type="range" id="points" name="points" min="100" max="300" step="1" oninput="this.nextElementSibling.value = this.value">
+                        <output>120</output>
+                    </div>
+                </div>
+                <div class="inpGroup" onclick="clr()">
+                    <div class="inp_title">
+                        Fasting Blood Suger
+                    </div>
+                    <div class="radioContainer">
+                        <p>
+                            <input type="radio" id="kom" name="bs" checked value="0">
+                            <label for="kom"> &lt;120 </label>
+                        </p>
+                        <p>
+                            <input type="radio" id="beshi" name="bs" value="1">
+                            <label for="beshi"> otherwise</label>
+                        </p>
+                    </div>
+                </div>
+                <div class="inpGroup" onclick="clr()">
+                    <div class="inp_title">
+                        Resting Electrocardiographic Results
+                    </div>
+                    <div class="radioContainer">
+                        <p>
+                            <input type="radio" id="normal" name="ecg" checked value="1">
+                            <label for="normal"> Normal </label>
+                        </p>
+                        <p>
+                            <input type="radio" id="abnormal" name="ecg" value="2">
+                            <label for="abnormal"> Abnormal S-T graph</label>
+                        </p>
+                        <p>
+                            <input type="radio" id="hypertension" name="ecg" value="0">
+                            <label for="hypertension"> Hypertrophy</label>
+                        </p>
+                    </div>
+                </div>
+                <div class="inpGroup" onclick="clr()">
+                    <div class="inp_title">
+                        Maximum Heart Rate
+                    </div>
+                    <div class="rangeContainer">
+                        <input class="inpRange inp" type="range" id="points" name="points" min="50" max="150" step="1" oninput="this.nextElementSibling.value = this.value">
+                        <output>72</output>
+                    </div>
+                </div>
+                <div class="inpGroup" onclick="clr()">
+                    <div class="inp_title">
+                        Do you face angina after excercise?
+                    </div>
+                    <div class="radioContainer">
+                        <p>
+                            <input type="radio" id="oy" name="ex" checked value="1">
+                            <label for="oy"> Yes</label>
+                        </p>
+                        <p>
+                            <input type="radio" id="na" name="ex" value="0">
+                            <label for="na"> No</label>
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <div class = 'foot'  style = "width: 100%">
+                    <div class = 'btn'> 
+                        <a href="/">
+                            <span style="display: block;">
+                                Back
+                            </span>
+                        </a>
+                    </div>
+                    <div id="done" class = 'btn' onclick="submit_heart()">submit data</div>
+                </div>
+                <div class="WavyText pageTitle" onclick="initWavyText(this)"> <span><p id = 'result'></p></span></div>
+            </div>
+        </form>
+    </body>
+</html>

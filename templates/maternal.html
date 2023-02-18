@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>Health Cal</title>
+        <script src="./../static/script.js"></script>
+        <link rel="stylesheet" href="./../static/style.css">
+        <link rel="stylesheet" href="./../static/pages.css">
+    </head>
+    <body>
+        <form>
+            <div class="container">
+                <div class="inp-top">
+                    <img src="./../static/images/stat_illustration.svg">
+                    <div class="WavyText pageTitle" onclick="initWavyText(this)">
+                        <span>M</span>
+                        <span>a</span>
+                        <span>t</span>
+                        <span>e</span>
+                        <span>r</span>
+                        <span>n</span>
+                        <span>a</span>
+                        <span>l</span>
+                        <span> </span>
+                        <span>R</span>
+                        <span>i</span>
+                        <span>s</span>
+                        <span>k</span>
+                        <span> </span>
+                        <span>D</span>
+                        <span>e</span>
+                        <span>t</span>
+                        <span>e</span>
+                        <span>c</span>
+                        <span>t</span>
+                        <span>i</span>
+                        <span>o</span>
+                        <span>n</span>
+                    </div>
+                </div>
+                <div class="inpGroup">
+                    <input type="number" class="inp" placeholder="" required step = "1" min = "1" max = "100">
+                    <label class="inpLbl">Age</label>
+                    <span></span>
+                </div>
+                <div class="inpGroup">
+                    <div class="inp_title">
+                        Systolic Blood Pressure (mm Hg) :
+                    </div>
+                    <div class="rangeContainer">
+                        <input class="inpRange inp" type="range" id="points" name="points" min="100" max="200" step="1" oninput="this.nextElementSibling.value = this.value">
+                        <output>120</output>
+                    </div>
+                </div>
+                <div class="inpGroup">
+                    <div class="inp_title">
+                        Diastolic Blood Pressure (mm Hg) :
+                    </div>
+                    <div class="rangeContainer">
+                        <input class="inpRange inp" type="range" id="points" name="points" min="50" max="120" step="1" oninput="this.nextElementSibling.value = this.value">
+                        <output>80</output>
+                    </div>
+                </div>
+                <div class="inpGroup">
+                    <input type="number" class="inp" placeholder="" required step = "0.1">
+                    <label class="inpLbl">Blood glucose level (mmol/L)</label>
+                    <span></span>
+                </div>
+                <div class="inpGroup">
+                    <input type="number" class="inp" placeholder="" required step = "1">
+                    <label class="inpLbl">Body Temperature(fahrenheit)</label>
+                    <span></span>
+                </div>
+                <div class="inpGroup">
+                    <input type="number" class="inp" placeholder="" required step = "1">
+                    <label class="inpLbl">Normal Heart Rate</label>
+                    <span></span>
+                </div>
+                <br>
+                <div class = 'foot'  style = "width: 100%">
+                    <div class = 'btn'> 
+                        <a href="/">
+                            <span style="display: block;">
+                                Back
+                            </span>
+                        </a>
+                    </div>
+                    <div id="done" class = 'btn' onclick="submit_maternal()">submit data</div>
+                </div>
+                <div class="WavyText pageTitle" style="text-align: center;" onclick="initWavyText(this)"> <span><p id = 'result'></p></span></div>
+            </div>
+        </form>
+    </body>
+</html>
